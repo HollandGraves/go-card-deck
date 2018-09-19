@@ -38,4 +38,152 @@ creating new functions outside of func main
 
 
 
+GO NOTE:
+Arrays in go
+
+	// there are two basic data structures for handeling records in Go: Arrays and Slices
+	// Arrays are of fixed length
+	// Slices are arrays that can grow or shrink at will
+	// Slices and Arrays must both be defined with ONE data type
+	// 		repeating: a slice and/or an array may only have one data type in it
+	// e.g. newSlice := []string{"one", "two", "three"}
+
+
+
+GO NOTE:
+Adding new elements to slices
+
+	// to add a new element to a slice you would take the variable the slice is stored in and set it equal to the append() function,
+	// 		while using at least two arguments:
+	// 		one argument will be the variable that contains the slice (so as to re-store the original
+	// 		slice's values into the new iteration of the cards variable; very similar to how to store values into an array using a spread
+	// 		operator)
+	// 		the other arugment will be the new values
+	// e.g.
+	// newSlice := []string{"one", "two", "three"}
+	// newSlice = append(newSlice, "four", "five")
+	//
+	// something especially important to note here is that the newSlice variable that is equal to the append statement will be returning
+	// 		a whole new version of newSlice. Go essentially goes back to the space where newSlice was originally written, deletes that entry
+	// 		and writes and new iteration of newSlice, elsewhere in the RAM, database, etc
+
+
+
+GO NOTE:
+Iterating over a slice
+
+	// to iterate over a slice you will use the following syntax
+	// e.g.
+	// newSlice := []string{"one", "two", "three"}
+	// for i, variablePlaceholder := range newSlice {
+	// 		fmt.Println(i, variablePlaceholder)
+	// }
+	// the important thing to notice here is that at each iteration, just as mentioned in the last section in the above note, the data for i and
+	// 		variablePlaceholder are comepletely being deleted and recreated with new values
+	// 		such that, at the first iteration of i:
+	// 			i := 0
+	// 			variablePlaceholder := "one"
+	// 		then at the second iteration of i:
+	//			i := 1
+	// 			variablePlaceholder := "two"
+	// at each step above i is being deleted from memory and recreated, same as variablePlaceholder
+	//
+	// also important, breaking down each step of the syntax: for i, placeHolderVariable := range newSlice {}
+	// 		here the most important part is the "range" keyword, the range keyword is one of many keywords that signifies the for loop iterating over
+	// 		every item in the slice.
+	// also notice how a := symbol is being used, this supports that Go will delete each entry each iteration, search for the value type of the new
+	// 		iteration, and resave the new iteration under the same placeHolderVariable name
+	//
+	// finally, to mention, in the syntax: for i, card := range cards {
+	//											fmt.Println(card)
+	// 										}
+	// 		WONT compile, because the i variable is not being used.
+	//		something about Go is that if a variable is being declared IT MUST BE USED, so you must actually use the syntax as follows:
+	//			for i, card := range cards {
+	// 				fmt.Println(i, card)
+	// 			}
+
+
+
+GO NOTE:
+The Go version of a Class and Extending A Class
+
+	// first the Go syntax for defining a "class" and "extending" the class to another "class"
+	//
+	// e.g.
+	// type deck []string
+	//
+	// in this example we're saying that the "class" (i.e. type) named deck is "extending" the "class" []string (i.e. a slice that only contains strings)
+	// in other words we're adding deck as a new data type and giving it the properties that a (e.g. []string) slice that only returns strings has
+
+
+
+GO NOTE:
+Creating a receiver function
+
+	// a receiver function is a function of a type (e.g. type deck []string) that can take an argument and is tied access as a method of anything that
+	// 		uses the deck type of slice
+	// this is the syntax for a receiver function
+	//
+	// e.g.
+	// func (d deck) print() {
+	//
+	// }
+	//
+	// in this case you will define the data type that print() is
+	// 		it is a function, so we will use "func"
+	// second you will use the receiver notation
+	// 		(d deck)
+	// 		this will allow the function to be used through dot notation on any variable that contains the use of the data type slice (which remember is
+	// 		a slice data type that contains strings at heart with a new name due to the type deck []string syntax)
+	// third we will write the name of the function we want to be able to use through dot notation
+
+
+
+GO NOTE:
+Using a receiver function
+
+	// in the case of using a receiver function that is tied to a "class" (aka type that is uniquely named and extending the properties of another keyword
+	// 		data type), you use the function through dot notation
+	//
+	// so imagining we have a type deck []string and a receiver function func (d deck) print() {} already defined in another file
+	// 		we would use the print() function as so:
+	//
+	// e.g. start
+	//
+	// 			deck.go file
+	// package main
+	//
+	// import "fmt"
+	//
+	// type deck []string
+	//
+	// func (d deck) print() {
+	// 		for i, card := range d {
+	// 			fmt.Println(i, card)
+	// 		}
+	// }
+	//
+	//			main.go file
+	// package main
+	//
+	// import "fmt"
+	//
+	// func main() {
+	// 		cards := deck{"Ace of Spades", "King of Hearts"}
+	// 		cards = append(cards, "Queen of Clubs")
+	// 		cards.print() 		// notice how the print() method is being accessed from the deck.go file, and is being used on a variable that has the deck data type stored in it, thus giving the variable access to the methods that have deck within their receiver function
+	// }
+	//
+	// e.g. finish
+	//
+	// Because of both files using package main, and presumably being in the same folder, they both have access to each other's code
+	// In this case the values of the cards variable are being passed as an argument into the print() function, in this case the value of cards is being
+	// 		passed in as d, within the receiver function print(), and is being used as the range of the print() function.
+	//
+	// It is common practice to name the receiver argument (e.g. d) as the first letter, or first two letters, of the data type the receiver function is tied to [e.g. (d deck)]
+
+
+
+
 */
