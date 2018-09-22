@@ -185,5 +185,60 @@ Using a receiver function
 
 
 
+GO NOTE:
+using specific ranges of a slice
+
+	// Very similarly to how you can access an item in an array (e.g. array[0] ) you can access items in a slice!
+	// even more so, you can access a range of items in a slice with the syntax
+	//
+	// e.g.
+	// slice[0:2]
+	//
+	// this would access the items STARTING FROM 0 and UP TO BUT NOT INCLUDING 2
+	// so the items 0 and 1 would get selected from the slice[0:2] array
+	//
+	// you can also access all the items of a slice STARTING FROM A SPECIFIC POINT using the syntax
+	// e.g.
+	// slice[0:]
+	// this would start from the 0 indexed item and select all items up to the end of the slice INCLUDING THE LAST ITEM
+	// you could also do
+	// e.g.
+	// slice[2:]
+	// this would start from the 2 indexed item and include all the indexed items starting from 2 onward, including the last item
+	//
+	// you can also access all the items from the beggining of the slice up until the specified point, NOT INCLUDING THE SPECIFIED POINT
+	// e.g.
+	// slice[:7]
+	// this would start from the 0 indexed item and include all items UP TO BUT NOT INCLUDING the 7th indexed item
+
+
+
+GO NOTE:
+setting arguments in a function
+
+	// when setting arguments in a function you must specify the name of the argument and it's type. Go is a statically typed langauge after all
+	// e.g.
+	// func dealCards (d deck, handSize int) {}
+	//
+	// in this case above the first argument is referenced in the function by the letter d and is of custom type defined deck
+	// in the case of the second argument, it is referenced by handSize and is of data type int
+
+
+
+GO NOTE:
+remembering to set return types for functions
+
+	// just like you declare a data type for arguments in functions, if your function returns at least one value, the value must be specified
+	// 		at the end of the function declaration right before the curly braces
+	//
+	// e.g.
+	// func deal(d deck, handSize int) (deck, deck) {}
+	//
+	// in this case above the function's name is deal
+	// it has an argument d of type deck, and an argument handSize of type int
+	// and returns two values, the first value will be of type deck and the second value will be of type deck
+
+
+
 
 */

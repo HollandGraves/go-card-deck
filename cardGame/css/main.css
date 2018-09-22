@@ -1,0 +1,303 @@
+body {
+  background-color: #0E9C3B;
+  background-image: url("../img/blackFelt.png");
+}
+.card {
+  display: inline-block;
+}
+.ace_clubs {
+ width: 71px;
+ height: 97px;
+ background: url('../img/cardDeckSprite.png') -3px -2px;
+}
+.two_clubs {
+ width: 71px;
+ height: 97px;
+ background: url('../img/cardDeckSprite.png') -76px -2px;
+}
+.three_clubs {
+ width: 71px;
+ height: 97px;
+ background: url('../img/cardDeckSprite.png') -149px -2px;
+}
+.four_clubs {
+ width: 71px;
+ height: 97px;
+ background: url('../img/cardDeckSprite.png') -222px -2px;
+}
+.five_clubs {
+ width: 71px;
+ height: 97px;
+ background: url('../img/cardDeckSprite.png') -295px -2px;
+}
+.six_clubs {
+ width: 71px;
+ height: 97px;
+ background: url('../img/cardDeckSprite.png') -368px -2px;
+}
+.seven_clubs {
+ width: 71px;
+ height: 97px;
+ background: url('../img/cardDeckSprite.png') -441px -2px;
+}
+.eight_clubs {
+ width: 71px;
+ height: 97px;
+ background: url('../img/cardDeckSprite.png') -514px -2px;
+}
+.nine_clubs {
+ width: 71px;
+ height: 97px;
+ background: url('../img/cardDeckSprite.png') -587px -2px;
+}
+.ten_clubs {
+ width: 71px;
+ height: 97px;
+ background: url('../img/cardDeckSprite.png') -660px -2px;
+}
+.jack_clubs {
+ width: 71px;
+ height: 97px;
+ background: url('../img/cardDeckSprite.png') -733px -2px;
+}
+.queen_clubs {
+ width: 71px;
+ height: 97px;
+ background: url('../img/cardDeckSprite.png') -806px -2px;
+}
+.king_clubs {
+ width: 71px;
+ height: 97px;
+ background: url('../img/cardDeckSprite.png') -879px -2px;
+}
+.ace_hearts {
+ width: 71px;
+ height: 97px;
+ background: url('../img/cardDeckSprite.png') -3px -100px;
+}
+.two_hearts {
+ width: 71px;
+ height: 97px;
+ background: url('../img/cardDeckSprite.png') -76px -100px;
+}
+.three_hearts {
+ width: 71px;
+ height: 97px;
+ background: url('../img/cardDeckSprite.png') -149px -100px;
+}
+.four_hearts {
+ width: 71px;
+ height: 97px;
+ background: url('../img/cardDeckSprite.png') -222px -100px;
+}
+.five_hearts {
+ width: 71px;
+ height: 97px;
+ background: url('../img/cardDeckSprite.png') -295px -100px;
+}
+.six_hearts {
+ width: 71px;
+ height: 97px;
+ background: url('../img/cardDeckSprite.png') -368px -100px;
+}
+.seven_hearts {
+ width: 71px;
+ height: 97px;
+ background: url('../img/cardDeckSprite.png') -441px -100px;
+}
+.eight_hearts {
+ width: 71px;
+ height: 97px;
+ background: url('../img/cardDeckSprite.png') -514px -100px;
+}
+.nine_hearts {
+ width: 71px;
+ height: 97px;
+ background: url('../img/cardDeckSprite.png') -587px -100px;
+}
+.ten_hearts {
+ width: 71px;
+ height: 97px;
+ background: url('../img/cardDeckSprite.png') -660px -100px;
+}
+.jack_hearts {
+ width: 71px;
+ height: 97px;
+ background: url('../img/cardDeckSprite.png') -733px -100px;
+}
+.queen_hearts {
+ width: 71px;
+ height: 97px;
+ background: url('../img/cardDeckSprite.png') -806px -100px;
+}
+.king_hearts {
+ width: 71px;
+ height: 97px;
+ background: url('../img/cardDeckSprite.png') -879px -100px;
+}
+.ace_spades {
+ width: 71px;
+ height: 97px;
+ background: url('../img/cardDeckSprite.png') -3px -198px;
+}
+.two_spades {
+ width: 71px;
+ height: 97px;
+ background: url('../img/cardDeckSprite.png') -76px -198px;
+}
+.three_spades {
+ width: 71px;
+ height: 97px;
+ background: url('../img/cardDeckSprite.png') -149px -198px;
+}
+.four_spades {
+ width: 71px;
+ height: 97px;
+ background: url('../img/cardDeckSprite.png') -222px -198px;
+}
+.five_spades {
+ width: 71px;
+ height: 97px;
+ background: url('../img/cardDeckSprite.png') -295px -198px;
+}
+.six_spades {
+ width: 71px;
+ height: 97px;
+ background: url('../img/cardDeckSprite.png') -368px -198px;
+}
+.seven_spades {
+ width: 71px;
+ height: 97px;
+ background: url('../img/cardDeckSprite.png') -441px -198px;
+}
+.eight_spades {
+ width: 71px;
+ height: 97px;
+ background: url('../img/cardDeckSprite.png') -514px -198px;
+}
+.nine_spades {
+ width: 71px;
+ height: 97px;
+ background: url('../img/cardDeckSprite.png') -587px -198px;
+}
+.ten_spades {
+ width: 71px;
+ height: 97px;
+ background: url('../img/cardDeckSprite.png') -660px -198px;
+}
+.jack_spades {
+ width: 71px;
+ height: 97px;
+ background: url('../img/cardDeckSprite.png') -733px -198px;
+}
+.queen_spades {
+ width: 71px;
+ height: 97px;
+ background: url('../img/cardDeckSprite.png') -806px -198px;
+}
+.king_spades {
+ width: 71px;
+ height: 97px;
+ background: url('../img/cardDeckSprite.png') -879px -198px;
+}
+.ace_diamonds {
+ width: 71px;
+ height: 97px;
+ background: url('../img/cardDeckSprite.png') -3px -296px;
+}
+.two_diamonds {
+ width: 71px;
+ height: 97px;
+ background: url('../img/cardDeckSprite.png') -76px -296px;
+}
+.three_diamonds {
+ width: 71px;
+ height: 97px;
+ background: url('../img/cardDeckSprite.png') -149px -296px;
+}
+.four_diamonds {
+ width: 71px;
+ height: 97px;
+ background: url('../img/cardDeckSprite.png') -222px -296px;
+}
+.five_diamonds {
+ width: 71px;
+ height: 97px;
+ background: url('../img/cardDeckSprite.png') -295px -296px;
+}
+.six_diamonds {
+ width: 71px;
+ height: 97px;
+ background: url('../img/cardDeckSprite.png') -368px -296px;
+}
+.seven_diamonds {
+ width: 71px;
+ height: 97px;
+ background: url('../img/cardDeckSprite.png') -441px -296px;
+}
+.eight_diamonds {
+ width: 71px;
+ height: 97px;
+ background: url('../img/cardDeckSprite.png') -514px -296px;
+}
+.nine_diamonds {
+ width: 71px;
+ height: 97px;
+ background: url('../img/cardDeckSprite.png') -587px -296px;
+}
+.ten_diamonds {
+ width: 71px;
+ height: 97px;
+ background: url('../img/cardDeckSprite.png') -660px -296px;
+}
+.jack_diamonds {
+ width: 71px;
+ height: 97px;
+ background: url('../img/cardDeckSprite.png') -733px -296px;
+}
+.queen_diamonds {
+ width: 71px;
+ height: 97px;
+ background: url('../img/cardDeckSprite.png') -806px -296px;
+}
+.king_diamonds {
+ width: 71px;
+ height: 97px;
+ background: url('../img/cardDeckSprite.png') -879px -296px;
+}
+
+/* ----------------------------
+----------------------------
+FLIPPING THE CARD
+----------------------------
+---------------------------- */
+
+#container {
+  position: relative;
+  margin: 10px auto;
+  width: 71px;
+  height: 97px;
+  z-index: 1;
+  perspective: 1000;
+}
+#card {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all 0.3s linear;
+}
+#container:hover #card {
+  transform: rotateY(180deg);
+  box-shadow: -5px 5px 5px #aaa;
+}
+.face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+.face.back {
+  display: block;
+  transform: rotateY(180deg);
+  box-sizing: border-box;
+}
