@@ -252,8 +252,69 @@ quick look at what a full receiver function looks like with arguments and two di
 
 
 GO NOTE:
-using the "ioutil" go package, and the WriteFile(filename string, data []byte, perm os.FileMode) error"
-and "ReadFile(filename string) ([]byte, error)"
+using the "ioutil" standard go package and the "strings" standard go package;
+as well as the:
+ioutil.   WriteFile(filename string, data []byte, perm os.FileMode) error {}
+ioutil.   ReadFile(filename string) ([]byte, error) {}
+strings.   Join(a []string, sep string) string {}
+strings.   Split(s string, sep string) []string {}
+
+	// 1st function. to go over is the WriteFile() standard go function
+	// the error value can be "nil" or "EOF"
+	// if the error value is nil, everything ran well
+	// if the error value is EOF, there was an actual error and the function did not successfully run
+	// func WriteFile(filename string, data []byte, perm io.FileMode) error {}
+	//
+	// 2nd function. then there is the ReadFile() standard go function
+	// what it does is it reads a file that is all []byte data and returns an error
+	// the error value can be "nil" or "EOF"
+	// if the error value is nil, everything ran well
+	// if the error value is EOF, there was an actual error and the function did not successfully run
+	//
+	// 3rd function. is the Join() standard go function
+	// this is for taking a slice of strings and concatonating all the values into one string
+	//
+	// 4th function. is the Split() standard go function
+	// this is for taking a string that contains values seperated by some common symbol and puts each value into a index in a slice of strings
+	// what it does is it writes a file within the directory the function's containing file is in and returns an error value
+
+
+
+GO NOTE:
+type conversion
+
+	// type conversion is where you turn data from one type to antoehr, and is fairly simple
+	// e.g.
+	// strToByte = []byte("This will turn into a byte type")
+	//
+	// e.g.
+	// intToFloat64 = float64(17)
+
+
+
+GO NOTE:
+using the type conversion and the ioutil and strings golang packages to turn a unique slice type into a byte type
+
+	// type deck []string
+	//
+	// func (d deck) toByte() []byte {
+	// 		return byte(strings.Join([]string(d), ","))
+	// }
+	//
+	// the deck type turns into a []string, then string, then byte
+
+
+
+GO NOTE:
+using the type conversion and the ioutil and strings golang packages to turn a []byte file into a unique slice type
+
+	// type deck []string
+	//
+	// func (b []byte) toDeck() {
+	// 		return deck(strings.Split(string(b), ","))
+	// }
+	//
+	// the []byte type turns into a string, then []string, then deck type
 
 
 
