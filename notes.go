@@ -242,5 +242,20 @@ remembering to set return types for functions
 
 
 
+GO NOTE:
+quick look at what a full receiver function looks like with arguments and two different returning values
+
+	// func (d deck) shuffleDeck(arg1 string, arg2 []byte) ([]slice, int) {
+	//
+	// }
+
+
+
+GO NOTE:
+using the "ioutil" go package, and the WriteFile(filename string, data []byte, perm os.FileMode) error"
+and "ReadFile(filename string) ([]byte, error)"
+
+
+
 
 */
