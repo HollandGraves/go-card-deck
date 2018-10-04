@@ -260,13 +260,21 @@ strings.   Join(a []string, sep string) string {}
 strings.   Split(s string, sep string) []string {}
 
 	// 1st function. to go over is the WriteFile() standard go function
+	// func WriteFile(filename string, data []byte, perm io.FileMode) error {}
+	// a common perm value to use that says that anyone can read or write to the file is: 0666
+	// e.g.
+	// ioutil.WriteFile("new_file", byteDataType, 0666)
+	// just like that and the file will read and be writable by anyone
 	// the error value can be "nil" or "EOF"
 	// if the error value is nil, everything ran well
 	// if the error value is EOF, there was an actual error and the function did not successfully run
-	// func WriteFile(filename string, data []byte, perm io.FileMode) error {}
 	//
 	// 2nd function. then there is the ReadFile() standard go function
 	// what it does is it reads a file that is all []byte data and returns an error
+	// also to mention, a common perm value to use that says that anyone can read or write to the file is: 0666
+	// e.g.
+	// ioutil.ReadFile("new_file", byteDataType, 0666)
+	// just like that and the file will read and be writable by anyone
 	// the error value can be "nil" or "EOF"
 	// if the error value is nil, everything ran well
 	// if the error value is EOF, there was an actual error and the function did not successfully run
@@ -316,6 +324,57 @@ using the type conversion and the ioutil and strings golang packages to turn a [
 	//
 	// the []byte type turns into a string, then []string, then deck type
 
+
+
+GO NOTE:
+using the os golang library standard package, and the os.Exit() function
+
+	// the os.Exit() function consists of one argument without a returning value
+	// os.Exit(code int) would be the argument and type of argument
+	// the way the code argument works is that, when the int 0 is passed into os.Exit() the function registers that nothing went wrong
+	// 		and to not exit the program
+	// but when the code argument is any other int besides 0, the os.Exit() function will activate and close the program
+
+
+
+GO NOTE:
+error handeling
+
+	// when an error value is returned from a function it will either be: nil (which is a value type that signifies that there was no error)
+	// 		or the value will be of some type that is not nil that signifies an error is present
+	// typically the error value from a returning function is stored in the variable: err
+	// after the value of the error is stored in err, then an if statement checks: if err != nil
+	// this check allows you to handle the various cases an actual error is returned
+	// typically the first thing you want to do when handeling an err that is != nil is to print the error with fmt.Println("Error:", err)
+	// that way your error value is printed and you can see what the problem is with the error
+	// then after that you want to write some code to handle how the error will affect the rest of the code
+	// e.g.
+	// if the err causes an infinite loop to happen it may be better to run the io.Exit() function and pass in an int argument into the function
+	// 		that makes the io.Exit() function to close the program, e.g.
+
+
+
+GO NOTE:
+shuffling with the rand.Shuffle() function
+
+	// the Shuffle() function is found within the "math/rand" package
+	// the syntax of the function looks like
+	//
+	// e.g.
+	// func Shuffle(n int, func (i, j int))
+	//
+	// the shuffle function takes a len(n) argurment typically, for this represents the length of the slice as an integer
+	// as well as another line of code that defines what is done with the i and j variables
+	//
+	// e.g.
+	// numbers := []int{1,2,3,4,5}
+	// rand.Shuffle(len(numbers), func (i, j int) {
+	// 		numbers[i], numbers[j] = numbers[j], numbers[i]
+	// })
+	//
+	// this will shuffle the numbers according to a certain precalculated order based upon the "seed" or "source" of the order
+	// this "seed" is the exact number (not necessarily an int) that the order is calculated from, as mentioned
+	// you may change this order with another function as you shall now see
 
 
 
