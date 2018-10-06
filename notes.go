@@ -378,4 +378,29 @@ shuffling with the rand.Shuffle() function
 
 
 
+GO NOTE:
+changing an RNG's seed number which is a "Source" data type, and the time.Now().UnixNano() functions as an argument
+
+	// First of all it is worth noting that a RNG (random number generator) creates its random order by first have a seed value
+	// 		this value, is a specific number that is used to create a specific "random" order. To change the random order in Golang
+	// 		you must use a specific function to change that value
+	// the function used to change the seed number or the "source" number is rand.NewNumber() found in the "math/rand" pakage
+	//
+	// e.g.
+	// rand.NewSource(seed int64) Source {}
+	//
+	// you will notice that the function returns a Source data type. This data type is the order that and "math/rand" package function
+	// 		will use for RNG's (and potentially other uses as of now)
+	//
+	// it is also worth noting that a good execution of using the rand.NewSource() function is with an argument that generates a new int64
+	// 		type everytime the function is called. A good example of this is:
+	//
+	// e.g.
+	// rand.NewSource(time.Now().UnixNano())
+	//
+	// this argument will call from the "time" standard package two functions that use the current time ".Now()" and then modifies that time
+	// 		to a int64 data type with the ".UnixNano()" function
+
+
+
 */
