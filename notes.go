@@ -403,4 +403,25 @@ changing an RNG's seed number which is a "Source" data type, and the time.Now().
 
 
 
+GO NOTE:
+using a test.go file
+
+	// a test file is used to test the functions of another file within that package, be it the main or whatever dependency package you've made
+	// a test file is useful because it can test the logic in the other file without having to run the other file and cause errors to a
+	// 		live database
+	// to make a test file, create a file ending with _test.go
+	// this file will first begin with the file it will be testing, for example. If you have a deck.go file that you want to write test
+	// 		code for then you would create a deck_test.go file to contain the function that will test you deck.go file
+	// you will need to import the standard package "testing" to have access to the ability run tests on functions from another file
+	// to run all the tests in a package, use the command in the terminal:
+	//
+	// go test
+	//
+	// VScode source code editor is awesome because it will allow you to run individual tests inside of the editor, instead of
+	// 		running the whole file and all the tests at once
+	//
+	// when making a test for a function, you want to ask yourself: "what do I really care about this function doing?" and then make a test for
+	// 		everyone of those things
+
+
 */
